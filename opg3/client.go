@@ -9,7 +9,7 @@ import (
 
 //For å teste serverfunksjonalitet kan udp og tcp skrives inn avhengig av hvilken server du skal koble til.
 func main() {
-	fmt.Println("Vil du koble til serveren gjennom UDP eller TCP?")
+	fmt.Println("Would you like to connect to the server through UDP or TCP?")
 	nettverk := bufio.NewScanner(os.Stdin)
 	for nettverk.Scan() {
 		p := make([]byte, 2048)
