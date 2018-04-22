@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Title </title>
+</head>
+<body>
+<h1>Utsiktspunkt</h1>
+{{ range .Entries}}
+<table>
+<fieldset>
+<h2> Navn: {{ .Name }}</h2>
+<h4> Adressenavn: {{ .Adressenavn }}</h4>
+<h4> Latitude: {{ .Latitude }}</h4>
+<h4> Longitude: {{ .Longitude }}</h4>
+</fieldset>
+</table>
+ {{end}}
+<br>
+</body>
+</html>

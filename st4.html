@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Title </title>
+</head>
+<body>
+<h1>Fylker</h1>
+{{ range .Entries}}
+<table>
+<fieldset>
+<h2> Navn: {{ .Name }}</h2>
+<h4> Nummer: {{ .Nummer }}</h4>
+</fieldset>
+</table>
+ {{end}}
+<br>
+</body>
+</html>

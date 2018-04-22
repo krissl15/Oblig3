@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Title </title>
+</head>
+<body>
+<h1>Countries</h1>
+{{ range .Countries}}
+<table>
+<fieldset>
+<h2> Name: {{ .Name }}</h2>
+<h4> Code: {{ .Code }}</h4>
+</fieldset>
+</table>
+ {{end}}
+<br>
+</body>
+</html>
