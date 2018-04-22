@@ -5,14 +5,15 @@ import (
 	"bufio"
 	"os"
 	"net"
+	"strings"
 )
 
 //For å teste serverfunksjonalitet kan udp og tcp skrives inn avhengig av hvilken server du skal koble til.
 func main() {
 	fmt.Println("Would you like to connect to the server through UDP or TCP?")
-	nettverk := bufio.NewScanner(os.Stdin)
-	for nettverk.Scan() {
-		connection := strings.ToLower(nettverk.Text())
+	network := bufio.NewScanner(os.Stdin)
+	for network.Scan() {
+		connection := strings.ToLower(network.Text())
 		p := make([]byte, 2048)
 		conn, err := net.Dial(connection, "127.0.0.1:17")
 		if err != nil {
