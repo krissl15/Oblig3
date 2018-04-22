@@ -12,8 +12,9 @@ func main() {
 	fmt.Println("Would you like to connect to the server through UDP or TCP?")
 	nettverk := bufio.NewScanner(os.Stdin)
 	for nettverk.Scan() {
+		connection := strings.ToLower(nettverk.Text())
 		p := make([]byte, 2048)
-		conn, err := net.Dial(nettverk.Text(), "127.0.0.1:17")
+		conn, err := net.Dial(connection, "127.0.0.1:17")
 		if err != nil {
 			fmt.Printf("Some error %v", err)
 			return
@@ -28,4 +29,3 @@ func main() {
 		conn.Close()
 	}
 }
-
