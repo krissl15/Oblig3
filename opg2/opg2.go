@@ -21,7 +21,7 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
-//fields lol java4e
+
 
 type St1 struct {
 	Dato                string `json:"Dato"`
